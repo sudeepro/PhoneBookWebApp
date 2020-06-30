@@ -6,9 +6,17 @@ import org.springframework.stereotype.Service;
 
 import com.sudeep.model.Contact;
 
+/**
+ * @author sudeep
+ *
+ */
 @Service
 public class ContactServiceImpl implements ContactService {
-
+	
+	
+	/** This methods save the contact
+	 *
+	 */
 	@Override
 	public boolean saveContact(Contact c) {
 		// TODO Auto-generated method stub

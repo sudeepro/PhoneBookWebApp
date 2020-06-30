@@ -13,14 +13,14 @@ public class SaveContactController {
 	@Autowired
 	private ContactService service;
 	
-	@GetMapping("/showForm")
+	@GetMapping("/showContacts")
 	public String loadForm(Model model) {
 
 		return null;
 
 	}
 	
-	@PostMapping
+	@PostMapping(name = "/saveContacts")
 	public String handleSubmitBtn(Contact c, Model model) {
 		return null;
 

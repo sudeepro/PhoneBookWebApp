@@ -16,6 +16,10 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import lombok.Data;
 
+/**
+ * @author sudeep
+ *
+ */
 @Entity
 @Table(name = "CONTACT")
 @Data

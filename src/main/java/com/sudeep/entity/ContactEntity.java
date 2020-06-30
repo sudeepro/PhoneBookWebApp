@@ -1,7 +1,6 @@
 package com.sudeep.entity;
 
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,7 +24,7 @@ public class ContactEntity {
 	@Id
 	@SequenceGenerator(name = "CONTACT_ID_GENERATOR", sequenceName = "CONTACT_SEQ")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CONTACT_ID_GENERATOR")
-	@Column(name = "CONTACT_id")
+	@Column(name = "CONTACT_ID")
 	private Integer cid;
 
 	@Column(name = "CONTACT_NAME")

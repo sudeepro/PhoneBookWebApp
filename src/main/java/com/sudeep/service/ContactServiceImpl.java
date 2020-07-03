@@ -2,9 +2,13 @@ package com.sudeep.service;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.sudeep.entity.ContactEntity;
 import com.sudeep.model.Contact;
+import com.sudeep.repository.ContactRepository;
 
 /**
  * @author sudeep
@@ -12,15 +16,20 @@ import com.sudeep.model.Contact;
  */
 @Service
 public class ContactServiceImpl implements ContactService {
-	
-	
-	/** This methods save the contact
+
+	@Autowired
+	private ContactRepository repository;
+
+	/**
+	 * This methods save the contact
 	 *
 	 */
 	@Override
-	public boolean saveContact(Contact c) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean saveContact(Contact contact) {
+		ContactEntity contactEntity = new ContactEntity();
+		BeanUtils.copyProperties(contact, contactEntity);
+		ContactEntity saveEntity = repository.save(contactEntity);
+		return (saveEntity != null);
 	}
 
 	@Override
@@ -31,7 +40,7 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public Contact getContactById(Integer cid) {
-		
+
 		return null;
 	}
 

@@ -21,12 +21,12 @@ import lombok.Data;
  *
  */
 @Entity
-@Table(name = "CONTACT")
+@Table(name = "CONTACT_DETAILS")
 @Data
 public class ContactEntity {
 
 	@Id
-	@SequenceGenerator(name = "CONTACT_ID_GENERATOR", sequenceName = "CONTACT_SEQ")
+	@SequenceGenerator(name = "CONTACT_ID_GENERATOR", sequenceName = "CONTACT_ID_SEQ", initialValue = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CONTACT_ID_GENERATOR")
 	@Column(name = "CONTACT_ID")
 	private Integer cid;
@@ -42,10 +42,12 @@ public class ContactEntity {
 
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "CREATED_DATE")
 	private Date createdDate;
 
 	@LastModifiedDate
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "LAST_MODIFIED_DATE")
 	private Date updatedDate;
 
 }

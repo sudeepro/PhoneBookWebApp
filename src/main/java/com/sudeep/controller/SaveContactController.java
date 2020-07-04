@@ -1,5 +1,7 @@
 package com.sudeep.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +18,9 @@ public class SaveContactController {
 
 	@GetMapping("/showContacts")
 	public String loadForm(Model model) {
-
-		return null;
+		List<Contact> allContacts = service.getAllContacts();
+		model.addAttribute("contacts", "allcontacts");
+		return "viewContacts";
 
 	}
 

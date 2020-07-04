@@ -1,6 +1,8 @@
 package com.sudeep.service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +36,12 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public List<Contact> getAllContacts() {
-		// TODO Auto-generated method stub
-		return null;
+		List<ContactEntity> entities = repository.findAll();
+		return entities.stream().map(entity -> {
+			Contact contact = new Contact();
+			BeanUtils.copyProperties(entity, contact);
+			return contact;
+		}).collect(Collectors.toList());
 	}
 
 	@Override

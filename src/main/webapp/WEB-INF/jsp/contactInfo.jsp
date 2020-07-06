@@ -7,6 +7,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Contact Information</title>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 </head>
 <body>
 	<h3>Save Contact</h3>
@@ -21,15 +25,18 @@
 		<table>
 			<tr>
 				<td>Contact Name</td>
-				<td><form:input path="contactName" /></td>
+				<td><form:input path="contactName" minlength="3" type="text"
+						required /></td>
 			</tr>
 			<tr>
 				<td>Contact Email:</td>
-				<td><form:input path="contactEmail" /></td>
+				<td><form:input path="contactEmail" type="email" name="email"
+						required /></td>
 			</tr>
 			<tr>
 				<td>Contact Number:</td>
-				<td><form:input path="contactNumber" /></td>
+				<td><form:input path="contactNumber" minlength="10" type="text"
+						required /></td>
 			</tr>
 			<tr>
 				<td><input type="reset" value="Reset"></td>

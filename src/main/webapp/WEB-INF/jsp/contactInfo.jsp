@@ -17,7 +17,7 @@
 	<p>
 		<font color="red">${errorMessage}</font>
 	</p>
-	<form:form action="saveContact" modelAttribute="contact" method="POST">
+	<form:form action="saveContacts" modelAttribute="contact" method="POST">
 		<table>
 			<tr>
 				<td>Contact Name</td>

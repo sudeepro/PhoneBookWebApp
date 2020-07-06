@@ -27,7 +27,7 @@ public class ContactEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CONTACT_ID_GENERATOR")
-	@SequenceGenerator(name = "CONTACT_ID_GENERATOR", sequenceName = "CONTACT_ID_SEQ")
+	@SequenceGenerator(name = "CONTACT_ID_GENERATOR", sequenceName = "CONTACT_ID_SEQ", allocationSize = 1)
 	@Column(name = "CONTACT_ID")
 	private Integer cid;
 
@@ -42,12 +42,12 @@ public class ContactEntity {
 
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "CREATED_DATE")
+	@Column(name = "CREATED_DATE", updatable = false)
 	private Date createdDate;
 
 	@LastModifiedDate
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "LAST_MODIFIED_DATE")
+	@Column(name = "LAST_MODIFIED_DATE", insertable = false)
 	private Date updatedDate;
 
 }

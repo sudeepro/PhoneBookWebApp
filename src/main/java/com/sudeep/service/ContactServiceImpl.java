@@ -64,8 +64,8 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public boolean deleteContact(Integer cid) {
-		// TODO Auto-generated method stub
-		return false;
+		repository.deleteById(cid);
+		return true;
 	}
 
 }

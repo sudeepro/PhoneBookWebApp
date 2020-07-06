@@ -29,7 +29,7 @@
 					<td>${c.contactName}</td>
 					<td>${c.contactEmail}</td>
 					<td>${c.contactNumber}</td>
-					<td><a href="">Edit</a> | <a href="">Delete</a></td>
+					<td><a href="editContact?cid=${c.contactId}">Edit</a> | <a href="deleteContact?cid=${c.contactId}">Delete</a></td>
 				</tr>
 
 			</c:forEach>

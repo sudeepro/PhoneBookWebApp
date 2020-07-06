@@ -5,8 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.sudeep.entity.ContactEntity;
 
-@Repository
 public interface ContactRepository extends JpaRepository<ContactEntity, Integer> {
-
 
 }

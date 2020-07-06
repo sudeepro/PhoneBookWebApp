@@ -9,6 +9,14 @@
 <title>Contact Information</title>
 </head>
 <body>
+	<h3>Save Contact</h3>
+	<p>
+		<font color="green">${successMessage}</font>
+	</p>
+
+	<p>
+		<font color="red">${errorMessage}</font>
+	</p>
 	<form:form action="saveContact" modelAttribute="contact" method="POST">
 		<table>
 			<tr>

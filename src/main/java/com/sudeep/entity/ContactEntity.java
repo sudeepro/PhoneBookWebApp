@@ -26,8 +26,8 @@ import lombok.Data;
 public class ContactEntity {
 
 	@Id
-	@SequenceGenerator(name = "CONTACT_ID_GENERATOR", sequenceName = "CONTACT_ID_SEQ", initialValue = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CONTACT_ID_GENERATOR")
+	@SequenceGenerator(name = "CONTACT_ID_GENERATOR", sequenceName = "CONTACT_ID_SEQ")
 	@Column(name = "CONTACT_ID")
 	private Integer cid;
 

@@ -9,22 +9,30 @@
 </head>
 <body>
 	<h3>View Contacts here</h3>
-	<table>
+
+	<a href=""addContact">+Add New Contact</a>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>S.No</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Number</th>
+				<th>Action</th>
+			</tr>
+		</thead>
 		<tbody>
 			<c:forEach items="{$contacts}" var="c" varStatus="index">
+
+				<tr>
+					<td>${index.count}</td>
+					<td>${c.contactName}</td>
+					<td>${c.contactEmail}</td>
+					<td>${c.contactNumber}</td>
+					<td><a href="">Edit</a> | <a href="">Delete</a></td>
+				</tr>
+
 			</c:forEach>
-			<tr>
-				<td>${index.count}</td>
-				<td>${c.contactName}</td>
-				<td>${c.contactEmail}</td>
-				<td>${c.contactNumber}</td>
-				<td>
-					<a href="">Edit</a>
-					<a href="">Delete</a>
-				</td>
-			</tr>
-
-
 		</tbody>
 
 	</table>

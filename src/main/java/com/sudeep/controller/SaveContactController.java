@@ -21,7 +21,6 @@ public class SaveContactController {
 		List<Contact> allContacts = service.getAllContacts();
 		model.addAttribute("contacts", "allcontacts");
 		return "viewContacts";
-
 	}
 
 	@PostMapping(name = "/saveContacts")
@@ -33,7 +32,6 @@ public class SaveContactController {
 			model.addAttribute("errorMessage", "Contact is not saved");
 		}
 		return "contactInfo";
-
 	}
 
 	public String handleViewContactsLink(Model model) {

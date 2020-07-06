@@ -2,6 +2,7 @@ package com.sudeep.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
@@ -46,7 +47,12 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public Contact getContactById(Integer cid) {
-
+		Optional<ContactEntity> findById = repository.findById(cid);
+		if (findById.isPresent()) {
+			ContactEntity contactEntity = findById.get();
+			Contact contact = new Contact();
+			BeanUtils.copyProperties(contactEntity, contact);
+ 		}
 		return null;
 	}
 

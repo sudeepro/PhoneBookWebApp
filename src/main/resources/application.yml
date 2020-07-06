@@ -12,10 +12,6 @@ spring:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: PHONEBOOK
     password: SUDEEP
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
     
       
     

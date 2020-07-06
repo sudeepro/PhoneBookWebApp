@@ -25,18 +25,15 @@
 		<table>
 			<tr>
 				<td>Contact Name</td>
-				<td><form:input path="contactName" minlength="3" type="text"
-						required /></td>
+				<td><form:input path="contactName" /></td>
 			</tr>
 			<tr>
 				<td>Contact Email:</td>
-				<td><form:input path="contactEmail" type="email" name="email"
-						required /></td>
+				<td><form:input path="contactEmail" /></td>
 			</tr>
 			<tr>
 				<td>Contact Number:</td>
-				<td><form:input path="contactNumber" minlength="10" type="text"
-						required /></td>
+				<td><form:input path="contactNumber" /></td>
 			</tr>
 			<tr>
 				<td><input type="reset" value="Reset"></td>

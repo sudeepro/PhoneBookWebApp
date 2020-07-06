@@ -8,4 +8,7 @@ public class Contact {
 	private String contactName;
 	private String contactEmail;
 	private Long contactNumber;
+
+	
+
 }

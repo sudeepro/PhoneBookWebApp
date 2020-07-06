@@ -6,15 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>View Contacts</title>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script
-	src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-<script>
+
 </head>
 <body>
 	<h3>View Contacts here</h3>
 
-	<a href=""addContact">+Add New Contact</a>
+	<a href="addContact">+Add New Contact</a>
 	<table border="1" table id="viewContact">
 		<thead>
 			<tr>
@@ -26,7 +23,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="{$contacts}" var="c" varStatus="index">
+			<c:forEach items="{$contact}" var="c" varStatus="index">
 
 				<tr>
 					<td>${index.count}</td>
@@ -40,12 +37,6 @@
 		</tbody>
 
 	</table>
-	<script>
-	$(document).ready(function() {
-		$('#viewContact').DataTable({
-			"pagingType" : "full_numbers"
-		});
-	});
-</script>
+
 </body>
 </html>

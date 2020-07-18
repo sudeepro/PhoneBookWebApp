@@ -1,6 +1,5 @@
 package com.sudeep.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -58,7 +57,6 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public boolean updateContact(Contact c) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

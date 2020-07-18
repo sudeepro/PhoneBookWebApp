@@ -42,7 +42,7 @@ public class ContactInfoController {
 	 * @param attributes
 	 * @return String
 	 */
-	@PostMapping(name = "/saveContact")
+	@PostMapping(value = "/addContact")
 	public String handleSubmitBtn(@ModelAttribute("contact") Contact c, RedirectAttributes attributes) {
 		boolean isSaved = service.saveContact(c);
 		if (isSaved) {
@@ -50,7 +50,7 @@ public class ContactInfoController {
 		} else {
 			attributes.addFlashAttribute("errorMessage", "Contact is not saved");
 		}
-		return "/redirect:createContactSuccess";
+		return "redirect:/createContactSuccess";
 	}
 
 	/**

@@ -7,10 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Contact Information</title>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
 </head>
 <body>
 	<h3>Save Contact</h3>
@@ -21,25 +18,33 @@
 	<p>
 		<font color="red">${errorMessage}</font>
 	</p>
-	<form:form action="saveContacts" modelAttribute="contact" method="POST">
+	<form:form action="addContact" modelAttribute="contact" method="POST">
+
 		<table>
 			<tr>
 				<td>Contact Name</td>
-				<td><form:input path="contactName" /></td>
+				<td><form:input path="contactName" type="name" id="name" /></td>
 			</tr>
 			<tr>
 				<td>Contact Email:</td>
-				<td><form:input path="contactEmail" /></td>
+				<td><form:input path="contactEmail" type="email" id="email" /></td>
 			</tr>
 			<tr>
 				<td>Contact Number:</td>
-				<td><form:input path="contactNumber" /></td>
+				<td><form:input path="contactNumber" type="text" id="number" /></td>
 			</tr>
 			<tr>
 				<td><input type="reset" value="Reset"></td>
 				<td><input type="submit" value="Save"></td>
 			</tr>
 		</table>
+		<a href="/viewContacts" style="text-decoration: underline color:green;">See
+			All Contacts</a>
 	</form:form>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+	<script src="WEB-INF/jsp/validation.js"></script>
 </body>
 </html>
